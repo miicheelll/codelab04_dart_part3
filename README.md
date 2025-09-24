@@ -1,5 +1,7 @@
 # codelab04_dart_part3
 
+Michelle Dorani Shiba/18/2341720113
+
 Praktikum 1
 - Langkah 1:
 
@@ -151,8 +153,8 @@ Praktikum 4
 
 - Langkah 6:
 
-    ![alt text](img/?raw=true)
-    ![alt text](img/?raw=true)
+    ![alt text](img/img/Prak4_Lngkh6.jpg?raw=true)
+    ![alt text](img/img/Prak4_Lngkh6a.jpg?raw=true)
 
     Kode tersebut ditambahkan list komprehensi yang digunakan untuk membuat listOfStrings dari listOfInts, menghasilkan string berformat '#0', '#1', '#2', '#3'. Pada kode ini tidak terdapat error. Manfaat utama dari Collection For di Dart adalah memudahkan pembuatan list secara dinamis dengan cara yang ringkas dan mudah dibaca, karena kita bisa langsung menghasilkan elemen-elemen baru dari sebuah koleksi atau perulangan tanpa harus menulis loop terpisah. Dengan fitur ini, kode menjadi lebih efisien dan deklaratif, misalnya saat ingin mengubah list angka menjadi list string dengan format tertentu, kita cukup menuliskannya dalam satu baris menggunakan for di dalam list.
 
@@ -189,18 +191,85 @@ Praktikum 5
     Kode tersebut sudah diperbaiki dengan menambahkan pemanggilan fungsi tukar di dalam main(), menggunakan sebuah record (10, 20) sebagai argumen. Perbaikan ini penting karena pada versi sebelumnya fungsi tukar hanya didefinisikan di luar main() tanpa pernah dijalankan, sehingga tidak menghasilkan output tambahan. Dengan perbaikan ini, program menampilkan record string dan named field, lalu memperlihatkan proses pertukaran elemen dalam record integer: mula-mula (10, 20) dan setelah dipanggil fungsi tukar, hasilnya menjadi (20, 10).
 
 - Tambahan: 
+
+    ![alt text](img/?raw=true)
+    ![alt text](img/?raw=true)
+
+    Ketika kode dijalankan, program pertama mencetak record ('first', a: 2, b: true, 'last') yang berisi kombinasi nilai biasa dan named field. Selanjutnya, karena fungsi tukar() didefinisikan langsung di dalam main(), fungsinya hanya bisa dipanggil di lingkup main() itu sendiri, berbeda dengan versi sebelumnya yang didefinisikan di luar sehingga bersifat global. Fungsi ini menerima record (int, int), memecahnya menjadi a dan b, lalu mengembalikannya dalam urutan terbalik (b, a). Dengan input (10, 20), program menampilkan "Sebelum ditukar: (10, 20)" dan "Sesudah ditukar: (20, 10)", sehingga terlihat jelas proses pertukaran value field dalam record tersebut.
+
 - Langkah 4:
+
+    ![alt text](img/?raw=true)
+    ![alt text](img/?raw=true)
+
+    Dengan penambahan kode (String, int) mahasiswa;, program akan error saat dijalankan karena variabel mahasiswa dideklarasikan tanpa diinisialisasi. Di Dart, record yang dideklarasikan harus diberi nilai awal sebelum digunakan; mencoba print(mahasiswa) tanpa inisialisasi menyebabkan runtime error atau compiler error tergantung versi Dart.
+
 - Perbaikan:
-- Tambahan: 
+
+    ![alt text](img/?raw=true)
+    ![alt text](img/?raw=true)
+
+    Dengan perbaikan ini, program berjalan normal: mencetak record string, menampilkan proses pertukaran nilai integer melalui fungsi tukar, dan mencetak record mahasiswa tanpa error.
+    
 - Langkah 5:
-- Perbaikan:
+
+    ![alt text](img/?raw=true)
+    ![alt text](img/?raw=true)
+
+    Penambahan kode ini memperkenalkan akses elemen record secara individual. Variabel mahasiswa2 adalah record yang berisi dua elemen posisi ('first' dan 'last') serta dua named field (a: 2 dan b: true). Dengan menggunakan sintaks $1 dan $2, program mengakses elemen berdasarkan posisi pertama dan kedua, sedangkan mahasiswa2.a dan mahasiswa2.b mengakses nilai named field. Akibatnya, output yang dicetak menampilkan 'first', 2, true, dan 'last', sehingga jelas terlihat bagaimana tiap value di dalam record dapat diambil baik melalui posisi maupun nama field, berbeda dari sebelumnya yang hanya menampilkan seluruh record sekaligus.
+
 - Tambahan: 
+
+    ![alt text](img/?raw=true)
+    ![alt text](img/?raw=true)
+
+    Di sini, elemen posisi pertama dan kedua pada mahasiswa2 diisi dengan nama dan NIM, sehingga ketika dicetak menggunakan $1 dan $2 akan menampilkan 'Michelle Dorani' dan 2341720113, sedangkan field a dan b tetap ada.
 
 Tugas Praktikum
 1. Silakan selesaikan Praktikum 1 sampai 5, lalu dokumentasikan berupa screenshot hasil pekerjaan Anda beserta penjelasannya!
+> Sudah terlampir
+
 2. Jelaskan yang dimaksud Functions dalam bahasa Dart!
+> Functions di Dart adalah blok kode yang bisa dipanggil untuk menjalankan instruksi tertentu dan bisa mengembalikan nilai; karena Dart sepenuhnya berorientasi objek, fungsi juga merupakan objek dengan tipe Function.
+
 3. Jelaskan jenis-jenis parameter di Functions beserta contoh sintaksnya!
+>
+a. Required positional parameters (posisional wajib)
+Parameter jenis ini harus diisi oleh pemanggil fungsi, dan posisinya penting.
+b. Optional positional parameters (posisional opsional)
+Parameter-posisional yang dibungkus dalam [] dan bisa tidak diberikan. Bila tidak diberikan, nilainya menjadi null (atau nilai default bila didefinisikan).
+c. Named parameters (parameter bernama)
+Parameter ini dituliskan dalam {} saat mendeklarasikan fungsi, dan dapat dipanggil dengan namaParam: nilai. Mereka bersifat opsional kecuali ditandai required.
+
+contoh:
+
+![alt text](img/?raw=true)
+
 4. Jelaskan maksud Functions sebagai first-class objects beserta contoh sintaknya!
+> “Functions as first-class objects” berarti dalam Dart, fungsi bukanlah entitas istimewa di luar tipe data, melainkan fungsi itu sendiri adalah objek atau “nilai” yang bisa disimpan ke dalam variabel, dilewatkan sebagai argumen, atau dikembalikan dari fungsi lain.
+
+contoh:
+
+![alt text](img/?raw=true)
+
 5. Apa itu Anonymous Functions? Jelaskan dan berikan contohnya!
+> Anonymous functions (fungsi anonim), juga dikenal sebagai lambda atau closures tanpa nama, adalah fungsi yang tidak punya nama. Sering digunakan sebagai argumen langsung dalam pemanggilan fungsi atau untuk konstruksi ringkas.
+
+contoh: 
+
+
+![alt text](img/?raw=true)
+
 6. Jelaskan perbedaan Lexical scope dan Lexical closures! Berikan contohnya!
+> Lexical scope (cakupan leksikal) berarti variabel dapat diakses berdasarkan struktur kode (blok {}) di mana mereka dideklarasikan. Dart menggunakan lexical (static) scoping, yaitu ketika mencari suatu variabel, compiler/mekanisme runtime akan “menyusuri” lingkungan (scope) luar berdasarkan susunan kode. sedangkan Lexical closure atau closure adalah sebuah objek fungsi yang “mengikat” (menyimpan) lingkungan leksikalnya sehingga meskipun fungsi itu dieksekusi di luar scope asalnya, ia tetap “mengingat” variabel dari luar yang dibutuhkannya. Dengan kata lain, fungsi yang dikembalikan atau dipindahkan tetap mempunyai akses ke variabel-variabel dari lingkungan saat fungsi itu didefinisikan.
+
+contoh:
+
+![alt text](img/?raw=true)
+
 7. Jelaskan dengan contoh cara membuat return multiple value di Functions!
+> Di Dart (sejak versi dengan record support), cara mengembalikan banyak nilai dari fungsi adalah dengan menggabungkannya dalam sebuah record.
+
+contoh:
+
+![alt text](img/?raw=true)
