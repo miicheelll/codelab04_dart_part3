@@ -81,71 +81,71 @@ Praktikum 3
 Praktikum 4
 - Langkah 1:
 
-    ![alt text](img/Prak4_Lngkh1?raw=true)
+    ![alt text](img/Prak4_Lngkh1.jpg?raw=true)
 
 - langkah 2:
 
-    ![alt text](img/Prak4_Lngkh2?raw=true)
+    ![alt text](img/Prak4_Lngkh2.jpg?raw=true)
 
     Saat kode tersebut dijalankan, program akan error karena mencoba mencetak variabel list1 yang sebenarnya tidak pernah didefinisikan di dalam kode. Variabel yang ada hanya list dan list2, sehingga pemanggilan print(list1); menimbulkan undefined name error.
 
 - Perbaikan:
 
-    ![alt text](img/Prak4_Lngkh2a?raw=true)
-    ![alt text](img/Prak4_Lngkh2b?raw=true)
+    ![alt text](img/Prak4_Lngkh2a.jpg?raw=true)
+    ![alt text](img/Prak4_Lngkh2b.jpg?raw=true)
 
     Perbaikan dilakukan pada baris print(list1); yang sebelumnya salah karena variabel list1 tidak pernah didefinisikan, diganti menjadi print(list); agar sesuai dengan variabel yang ada. Setelah diperbaiki, program akan mencetak isi list yaitu [1, 2, 3], kemudian list2 yang berisi [0, 1, 2, 3] hasil dari menambahkan elemen 0 di depan dengan operator spread (...), serta mencetak panjang list2 yang bernilai 4.
 
 - Langkah 3: 
 
-    ![alt text](img/Prak4_Lngkh3?raw=true)
-    ![alt text](img/Prak4_Lngkh3a?raw=true)
+    ![alt text](img/Prak4_Lngkh3.jpg?raw=true)
+    ![alt text](img/Prak4_Lngkh3a.jpg?raw=true)
 
     Kode tersebut tidak bisa dijalankan karena error di baris list1 = [1, 2, null];. Masalahnya, variabel list1 belum pernah dideklarasikan sebelumnya.
 
 - Perbaikan:
 
-    ![alt text](img/Prak4_Lngkh3b?raw=true)
-    ![alt text](img/Prak4_Lngkh3c?raw=true)
+    ![alt text](img/Prak4_Lngkh3b.jpg?raw=true)
+    ![alt text](img/Prak4_Lngkh3c.jpg?raw=true)
 
     Pada kode yang diperbaiki, penambahan kata kunci var pada deklarasi list1 (var list1 = [1, 2, null];) dilakukan karena sebelumnya variabel tersebut belum pernah didefinisikan sehingga menyebabkan error. Setelah diperbaiki, program berjalan normal: list berisi [1, 2, 3], list2 berisi [0, 1, 2, 3] dengan panjang 4, list1 berisi [1, 2, null], dan list3 berisi [0, 1, 2, null] dengan panjang 4 berkat penggunaan operator spread null-aware ...?.
 
 - Tambahan:
 
-    ![alt text](img/Prak4_Lngkh3d?raw=true)
-    ![alt text](img/Prak4_Lngkh3e?raw=true)
+    ![alt text](img/Prak4_Lngkh3d.jpg?raw=true)
+    ![alt text](img/Prak4_Lngkh3e.jpg?raw=true)
 
     Pada kode ini ditambahkan variabel baru nim yang berisi deretan angka sesuai NIM, kemudian dibuat variabel listNIM menggunakan Spread Operator (...nim) sehingga setiap elemen dari nim disalin ke dalam list baru. Dengan penambahan ini, selain menampilkan list bawaan (list, list2, list1, dan list3), program juga dapat menampilkan list khusus berisi NIM, sehingga memperlihatkan cara penggunaan Spread Operator untuk menyalin isi list lain ke dalam variabel baru.
 
 - Langkah 4:
 
-    ![alt text](img/Prak4_Lngkh4?raw=true)
-    ![alt text](img/Prak4_Lngkh4a?raw=true)
+    ![alt text](img/Prak4_Lngkh4.jpg?raw=true)
+    ![alt text](img/Prak4_Lngkh4a.jpg?raw=true)
 
     Kode tersebut error karena variabel promoActive belum didefinisikan saat digunakan pada list nav.
 
 - Perbaikan:
 
-    ![alt text](img/Prak4_Lngkh4b?raw=true)
-    ![alt text](img/Prak4_Lngkh4c?raw=true)
-    ![alt text](img/Prak4_Lngkh4d?raw=true)
-    ![alt text](img/Prak4_Lngkh4e?raw=true)
+    ![alt text](img/Prak4_Lngkh4b.jpg?raw=true)
+    ![alt text](img/Prak4_Lngkh4c.jpg?raw=true)
+    ![alt text](img/Prak4_Lngkh4d.jpg?raw=true)
+    ![alt text](img/Prak4_Lngkh4e.jpg?raw=true)
 
     Perbaikan dilakukan dengan menambahkan deklarasi var promoActive = true; sebelum pembuatan list nav, karena sebelumnya variabel tersebut belum ada sehingga menyebabkan error. Setelah diperbaiki, program berjalan normal: menampilkan isi list [1, 2, 3], list [0, 1, 2, 3] dengan panjang 4, list [1, 2, null], list [0, 1, 2, null] dengan panjang 4, dan list nav berisi ['Home', 'Furniture', 'Plants', 'Outlet'] jika promoActive bernilai true. Namun jika promoActive diubah menjadi false, maka 'Outlet' tidak ditambahkan sehingga isi nav hanya ['Home', 'Furniture', 'Plants'].
 
 - Langkah 5:
 
-    ![alt text](img/Prak4_Lngkh5?raw=true)
-    ![alt text](img/Prak4_Lngkh5a?raw=true)
+    ![alt text](img/Prak4_Lngkh5.jpg?raw=true)
+    ![alt text](img/Prak4_Lngkh5a.jpg?raw=true)
 
     Kode tersebut akan error pada bagian nav2 karena kondisi if (login case 'Manager') tidak valid: variabel login belum pernah dideklarasikan dan sintaks case tidak bisa digunakan langsung di dalam list literal.
 
 - Perbaikan:
 
-    ![alt text](img/Prak4_Lngkh5b?raw=true)
-    ![alt text](img/Prak4_Lngkh5c?raw=true)
-    ![alt text](img/Prak4_Lngkh5d?raw=true)
-    ![alt text](img/Prak4_Lngkh5e?raw=true)
+    ![alt text](img/Prak4_Lngkh5b.jpg?raw=true)
+    ![alt text](img/Prak4_Lngkh5c.jpg?raw=true)
+    ![alt text](img/Prak4_Lngkh5d.jpg?raw=true)
+    ![alt text](img/Prak4_Lngkh5e.jpg?raw=true)
 
     Perbaikan dilakukan dengan menambahkan deklarasi variabel login = 'Manager' dan mengganti sintaks salah if (login case 'Manager') menjadi if (login == 'Manager') agar sesuai aturan Dart. Setelah perbaikan, program berjalan normal: nav mencetak ['Home', 'Furniture', 'Plants'] karena promoActive bernilai false, sedangkan nav2 mencetak ['Home', 'Furniture', 'Plants', 'Inventory'] jika login bernilai 'Manager'. Jika variabel login memiliki kondisi lain, misalnya 'Admin', maka 'Inventory' tidak akan ditambahkan sehingga nav2 hanya berisi ['Home', 'Furniture', 'Plants'].
 
